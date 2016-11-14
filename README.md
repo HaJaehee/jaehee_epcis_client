@@ -12,7 +12,7 @@ Individual Role Based Access for EPCIS Access Authorization is implemented.
 
 
 ## Usage
-First of all, please configure the jaehee_epcis_client.configuration.EPCISConfiguration.java file
+First of all, please configure the jaehee_epcis_client.configuration.EPCISConfiguration.java file.
 This program communicates with EPCIS Access Control Server [https://github.com/HaJaehee/jaehee_epcis_ac].
 
 
