@@ -10,7 +10,7 @@ package jaehee_epcis_client.configuration;
 */
 
 public class EPCISConfiguration {
-	public static String EPCIS_AC_Server_URL = "winsgkwogml.iptime.org:3000";
+	public static String EPCIS_AC_Server_URL = "example.com:3000";
 	public static String EPCISname = "rootepcis";
 	public static String Username = "root";
 	public static String EPCIS_Clienttoken = "9d05821fe058a07a80e8f7d04b84f5f3684eabc5";
