@@ -17,20 +17,14 @@ public class Main {
 		
 		//EPCIS Query Client Example
 		EPCISQueryClient queryClient = new EPCISQueryClient();
-		//= new EPCISQueryClient(EPCISConfiguration.EPCIS_AC_Server_URL,EPCISConfiguration.EPCISname,EPCISConfiguration.Username,EPCISConfiguration.EPCIS_Clienttoken);
+		//= new EPCISQueryClient(EPCIS_AC_Server_URL,EPCISname,Username,EPCIS_Clienttoken);
 		
-		String query = "eventType=TransformationEvent&GE_eventTime=2013-10-31T14:58:56.591Z";
+		String query = "eventCountLimit=1&orderBy=recordTime";
 		queryClient.setQuery(query);
 		String queryResult = queryClient.doQuery();
 		System.out.println(queryResult);
 
-		
-		
 		//EPCIS Capture Client Example
-		EPCISCaptureClient captureClient = new EPCISCaptureClient();
-		//= new EPCISCaptureClient(EPCISConfiguration.EPCIS_AC_Server_URL,EPCISConfiguration.EPCISname,EPCISConfiguration.Username,EPCISConfiguration.EPCIS_Clienttoken);
-
-
 		String epcisevent = "<?xml version=\"1.0\" encoding=\"UTF-8\" standalone=\"yes\"?>"
 							+ "<!DOCTYPE project>"
 							+ "<epcis:EPCISDocument schemaVersion=\"1.2\" "
@@ -92,6 +86,8 @@ public class Main {
 									+ "</EventList>"
 								+ "</EPCISBody>"
 							+ "</epcis:EPCISDocument>";
+		EPCISCaptureClient captureClient = new EPCISCaptureClient();
+		//= new EPCISCaptureClient(EPCIS_AC_Server_URL,EPCISname,Username,EPCIS_Clienttoken);
 		captureClient.setEvent(epcisevent);
 		String captureResult = captureClient.doCapture();
 		System.out.println(captureResult); 

@@ -107,9 +107,7 @@ public class EPCISCaptureClient extends EPCISClient{
 	/**
 	 * Do a HTTT POST request and return the status code.
 	 * 
-	 * @param uri
-	 *            URI for HTTP POST request
-	 * @return True, when request was successful
+	 * @return String, when request was successful
 	 * @throws RuntimeException
 	 *             When status code is not HTTP_CREATED
 	 */
